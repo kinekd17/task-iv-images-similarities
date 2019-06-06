@@ -1,6 +1,5 @@
 import numpy as np
 from math import sqrt
-from pprint import pprint
 
 
 def get_distance(x1, y1, x2, y2):

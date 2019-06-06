@@ -59,12 +59,12 @@ def get_perspective_transformation(pairs):
          [0, 0, 0, x2, y2, 1, -v2*x2, -v2*y2],
          [0, 0, 0, x3, y3, 1, -v3*x3, -v3*y3],
          [0, 0, 0, x4, y4, 1, -v4*x4, -v4*y4]]
+
     N = [u1, u2, u3, u4, v1, v2, v3, v4]
 
-    M = np.array(M)
+    M = np.linalg.pinv(np.array(M))
     N = np.array(N)
 
-    M = np.linalg.pinv(M)
     result_vector = np.dot(M, N)
     result_vector = np.append(result_vector, [1])
 
