@@ -16,7 +16,6 @@ def show_pairs(first_image_path, second_image_path, pairs):
     plt.clf()
 
     for pair in pairs:
-
         plt.plot([pair[0][0], pair[1][0] + first_image.size[0]],
                  [pair[0][1], pair[1][1]],
                  '#FFFF00')
